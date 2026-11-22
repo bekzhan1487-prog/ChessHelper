@@ -4,6 +4,7 @@ plugins {
 }
 
 android {
+    namespace 'com.chesshelper'
     compileSdk 34
     defaultConfig {
         applicationId "com.chesshelper"

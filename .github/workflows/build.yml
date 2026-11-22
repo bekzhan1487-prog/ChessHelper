@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           java-version: '17'
           distribution: 'temurin'
@@ -20,7 +20,10 @@ jobs:
         run: |
           wget -q https://github.com/official-stockfish/Stockfish/releases/download/sf_16/stockfish-android-armv8.tar
           tar -xf stockfish-android-armv8.tar
-          cp stockfish-android-armv8/stockfish app/src/main/assets/stockfish
+          ls -la
+          find . -name "stockfish*" -type f
+          mkdir -p app/src/main/assets
+          find . -name "stockfish" -type f | head -1 | xargs -I{} cp {} app/src/main/assets/stockfish
 
       - name: Create gradlew
         run: |

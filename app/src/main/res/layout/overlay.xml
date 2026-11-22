@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#CC000000"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnWhite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Белые"
+            android:textSize="12sp"
+            android:backgroundTint="#4CAF50"/>
+
+        <Button
+            android:id="@+id/btnBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Чёрные"
+            android:textSize="12sp"
+            android:backgroundTint="#9E9E9E"
+            android:layout_marginStart="4dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvMove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"/>
+
+</LinearLayout>
